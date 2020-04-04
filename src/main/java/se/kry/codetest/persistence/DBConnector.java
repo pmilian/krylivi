@@ -1,4 +1,4 @@
-package se.kry.codetest;
+package se.kry.codetest.persistence;
 
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
@@ -25,7 +25,6 @@ public class DBConnector {
   public Future<ResultSet> query(String query) {
     return query(query, new JsonArray());
   }
-
 
   public Future<ResultSet> query(String query, JsonArray params) {
     if(query == null || query.isEmpty()) {
